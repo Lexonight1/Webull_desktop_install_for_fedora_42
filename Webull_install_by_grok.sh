@@ -66,7 +66,7 @@ toolbox create --distro ubuntu --release "$RELEASE" "$TOOLBOXNAME" || {
 echo "Updating container and installing dependencies..."
 toolbox run -c "$TOOLBOXNAME" sudo apt update -y
 toolbox run -c "$TOOLBOXNAME" sudo apt upgrade -y
-toolbox run -c "$TOOLBOXNAME" sudo apt install -y libgl1 libfontconfig1 libnss3 libasound2t64 libharfbuzz0b libthai0
+toolbox run -c "$TOOLBOXNAME" sudo apt install -y libxrandr2 libgl1 libfontconfig1 libnss3 libasound2t64 libharfbuzz0b libthai0
 
 # Find and validate Webull .deb file
 WBDEB=$(find "$DOWNDIR" -name "$FILENAME" | head -n 1)

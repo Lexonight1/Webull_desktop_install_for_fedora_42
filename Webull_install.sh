@@ -23,7 +23,7 @@ toolbox create --distro ubuntu --release $RELEASE "$TOOLBOXNAME"
 # install necessary debs
 toolbox run -c "$TOOLBOXNAME" sudo apt update -y
 toolbox run -c "$TOOLBOXNAME" sudo apt upgrade -y
-toolbox run -c "$TOOLBOXNAME" sudo apt-get install libgl1 libfontconfig1 libnss3 libasound2t64 libharfbuzz0b libthai0 -y
+toolbox run -c "$TOOLBOXNAME" sudo apt-get install libxrandr2 libgl1 libfontconfig1 libnss3 libasound2t64 libharfbuzz0b libthai0 -y
 
 WBDEB=$(find "$DOWNDIR" -name "$FILENAME" | head -n 1)
 
